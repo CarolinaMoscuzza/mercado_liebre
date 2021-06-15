@@ -7,8 +7,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static(__dirname + "/public")); 
 
-app.listen(8080, () => {
-    console.log("Servidor Mercado Liebre funcionando"); 
+app.listen(process.env.PORT || 3000, function() {
+    console.log("Servidor corriendo en puerto 3000"); 
 }); 
 
 app.get("/", (req, res) => {
